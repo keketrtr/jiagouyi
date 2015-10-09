@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sishuok.architecture1.customermgr.dao.CustomerDAO">
+	<insert id="create" parameterType="CM">
+		insert into tb1_customer(customerId,pwd,showName,trueName,registerTime)
+		values(#{customerId},#{pwd},#{showName},#{trueName},#{registerTime})
+	</insert>
+	<update id="update" parameterType="CM">
+		update tb1_customer set customerId=#{customerId},pwd=#{pwd},
+		showName=#{showName},trueName=#{trueName},registerTime=#{registerTime}
+		where uuid=#{uuid}
+	</update>
+	<delete id="delete" parameterType="int">
+		delete from tb1_customer where uuid=#{uuid}
+	</delete>
+	<select id="getByUuid" parameterType="int" resultType="CM">
+		select * from tb1_customer where uuid=#{uuid}
+	</select>
+	<select id="getByConditionPage" parameterType="CQM" resultType="CM">
+		select * from tb1_customer
+		<where>
+			<if test="uuid != null &amp;&amp; uuid > 0">
+				and uuid=#{uuid}
+			</if>
+			<if test="customerId != null">
+				and customerId=#{customerId}
+			</if>
+			<if test="showName != null">
+				and showName like "%"#{showName}"%"
+			</if>
+		</where>
+	</select>
+</mapper>
