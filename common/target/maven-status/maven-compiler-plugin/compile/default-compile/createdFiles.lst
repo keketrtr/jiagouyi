@@ -1,9 +1,0 @@
-com\sishuok\util\format\DateFormatHelper.class
-com\sishuok\architecture1\common\vo\BaseModel.class
-com\sishuok\util\json\JsonHelper.class
-com\sishuok\architecture1\common\dao\BaseDAO.class
-com\sishuok\pageutil\ReflectHelper.class
-com\sishuok\pageutil\PagePlugin.class
-com\sishuok\architecture1\common\service\BaseService.class
-com\sishuok\pageutil\Page.class
-com\sishuok\architecture1\common\service\IBaseService.class
