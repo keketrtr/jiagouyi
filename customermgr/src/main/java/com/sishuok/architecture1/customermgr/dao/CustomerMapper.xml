@@ -22,10 +22,10 @@
 			<if test="uuid != null &amp;&amp; uuid > 0">
 				and uuid=#{uuid}
 			</if>
-			<if test="customerId != null">
+			<if test="customerId != null &amp;&amp; customerId != ''">
 				and customerId=#{customerId}
 			</if>
-			<if test="showName != null">
+			<if test="showName != null &amp;&amp; showName != ''">
 				and showName like "%"#{showName}"%"
 			</if>
 		</where>

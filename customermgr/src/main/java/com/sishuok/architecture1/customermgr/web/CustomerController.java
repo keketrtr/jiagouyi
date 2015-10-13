@@ -74,5 +74,8 @@ public class CustomerController {
 		
 		return "customer/list";
 	}
-	
+	@RequestMapping(value="/toQuery",method=RequestMethod.GET)
+	public String toQuery(){
+		return "customer/query";
+	}
 }

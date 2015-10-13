@@ -13,6 +13,12 @@
 <body>
 	<table width="100%" border="1" cellpadding="0" cellspacing="1">
 		<tr>
+			<td colspan="6">
+				<a href="${pageContext.request.contextPath}/customer/toQuery">转到查询</a>
+				<a href="${pageContext.request.contextPath}/customer/toAdd">转到新增</a>
+			</td>
+		</tr>
+		<tr>
 			<td colspan="6" align="center">客户列表</td>
 		</tr>
 		<tr>
@@ -38,6 +44,7 @@
 		</c:forEach>
 		<tr>
 			<td colspan="6" align="center">
+				<input type="hidden" id="queryJsonStr" value='${wm.queryJsonStr}' />
 				<myTag:page page="${page}"></myTag:page>
 			</td>
 		</tr>
