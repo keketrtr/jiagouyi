@@ -16,7 +16,7 @@
 			<td>客户编号</td>
 			<td><input type="text" name="customerId" /></td>
 			<td>客户密码</td>
-			<td><input type="password" name="pwd" /></td>
+			<td><input type="text" name="pwd" /></td>
 		</tr>
 		<tr>
 			<td>显示名称</td>

@@ -13,13 +13,20 @@
   <packaging>war</packaging>
   <name>goodsmgrweb Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <dependencies>
+    <dependency>
+    	<groupId>com.sishuok</groupId>
+    	<artifactId>common</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
     <dependency>
     	<groupId>com.sishuok</groupId>
     	<artifactId>goodsmgr</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
+  
   <build>
     <finalName>goodsmgrweb</finalName>
     <plugins>

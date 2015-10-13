@@ -1,6 +1,6 @@
-package com.sishuok.architecture1.customermgr.web;
+package com.sishuok.architecture1.common.vo;
 
-public class CustomerWebModel {
+public class WebModel {
 	private String queryJsonStr;
 	private int currentPage = 1;
 	private int numPerPage = 0;
@@ -31,7 +31,7 @@ public class CustomerWebModel {
 
 	@Override
 	public String toString() {
-		return "CustomerWebModel [queryJsonStr=" + queryJsonStr
+		return "WebModel [queryJsonStr=" + queryJsonStr
 				+ ", currentPage=" + currentPage + ", numPerPage=" + numPerPage
 				+ "]";
 	}

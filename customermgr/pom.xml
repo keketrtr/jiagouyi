@@ -13,6 +13,7 @@
   <packaging>war</packaging>
   <name>customermgr Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <dependencies>
     <dependency>
     	<groupId>com.sishuok</groupId>
@@ -20,6 +21,7 @@
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
+  
   <build>
     <finalName>customermgr</finalName>
     <plugins>
