@@ -1,8 +1,10 @@
 package com.sishuok.architecture1.common.vo;
 
+import java.io.Serializable;
+
 import com.sishuok.pageutil.Page;
 
-public class BaseModel<M> {
+public class BaseModel<M> implements Serializable {
 	private Integer uuid;
 	private Page<M> page = new Page<M>();
 

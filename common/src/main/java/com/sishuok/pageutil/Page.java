@@ -1,9 +1,10 @@
 package com.sishuok.pageutil;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
-public class Page<E> {
+public class Page<E> implements Serializable {
 	private int startIndex;
 	private int numPerPage = 2;
 	private int totalCount;

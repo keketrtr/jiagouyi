@@ -38,5 +38,8 @@ public class Client {
 		
 		Page<CustomerModel> page = client.getCustomerService().getByConditionPage(cqm);
 		System.out.println("list=="+page);
+		
+		Page<CustomerModel> page2 = client.getCustomerService().getByConditionPage(cqm);
+		System.out.println("list2222=="+page2);
 	}
 }
