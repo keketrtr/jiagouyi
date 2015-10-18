@@ -19,6 +19,7 @@
     <module>cartmgr</module>
     <module>ordermgr</module>
     <module>storemgr</module>
+    <module>front</module>
   </modules>
   
   <properties>
@@ -72,7 +73,7 @@
       <artifactId>mybatis-spring</artifactId>
       <version>1.2.2</version>
     </dependency>
-    <!-- spring相关jar包 -->
+    <!-- spring相关jar�?-->
     <dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
@@ -157,7 +158,19 @@
 	  	</exclusion>
 	  </exclusions>
 	</dependency>
-
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+    	<groupId>javax.servlet.jsp</groupId>
+    	<artifactId>jsp-api</artifactId>
+    	<version>2.2</version>
+    	<scope>provided</scope>
+    </dependency>
+	
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
