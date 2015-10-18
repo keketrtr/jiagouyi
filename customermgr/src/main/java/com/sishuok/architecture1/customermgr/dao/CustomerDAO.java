@@ -8,5 +8,7 @@ import com.sishuok.architecture1.customermgr.vo.CustomerQueryModel;
 
 @Repository
 public interface CustomerDAO extends BaseDAO<CustomerModel, CustomerQueryModel> {
+
+	public CustomerModel getByCustomerId(String customerId);
 	
 }

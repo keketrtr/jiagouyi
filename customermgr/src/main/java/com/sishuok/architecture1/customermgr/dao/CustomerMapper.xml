@@ -16,6 +16,9 @@
 	<delete id="delete" parameterType="int">
 		delete from tb1_customer where uuid=#{uuid}
 	</delete>
+	<select id="getByCustomerId" parameterType="String" resultType="CM">
+		select * from tb1_customer where customerId=#{customerId}
+	</select>
 	<select id="getByUuid" parameterType="int" resultType="CM">
 		select * from tb1_customer where uuid=#{uuid}
 	</select>
