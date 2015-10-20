@@ -14,7 +14,7 @@
 			<td colspan="2">&nbsp;</td>
 		</tr>		
 		<tr>
-			<td>&nbsp;</td>
+			<td width="350">&nbsp;</td>
 			<td>
 				<table>
 					<tr>
