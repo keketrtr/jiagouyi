@@ -7,6 +7,8 @@
 		<typeAlias type="com.sishuok.architecture1.customermgr.vo.CustomerQueryModel" alias="CQM"/>
 		<typeAlias type="com.sishuok.architecture1.goodsmgr.vo.GoodsModel" alias="GM"/>
 		<typeAlias type="com.sishuok.architecture1.goodsmgr.vo.GoodsQueryModel" alias="GQM"/>
+		<typeAlias type="com.sishuok.architecture1.cartmgr.vo.CartModel" alias="CartM"/>
+		<typeAlias type="com.sishuok.architecture1.cartmgr.vo.CartQueryModel" alias="CartQM"/>
 	</typeAliases>
 	
 	<!-- 配置分页拦截器 -->

@@ -12,32 +12,21 @@
 </head>
 <body>
 
-<table width="70%" align="center">
-	<tr>
-		<td colspan="4" align="center"><a href="${pageContext.request.contextPath}/toCart">查看购物车</a></td>
-	</tr>
-<c:forEach items="${page.result}" var="m" varStatus="s">
-	<c:if test="${s.index % 4 == 0 }">
-	<tr>
-	</c:if>
-		<td>
-			<a href="${pageContext.request.contextPath}/toGoodsDesc/${m.uuid }">
-				<table>
-					<tr>
-						<td><img width="120" height="100" alt="暂无图片" src="${m.imgPath }"></td>
-						<td>${m.description }</td>
-					</tr>
-					<tr>
-						<td colspan="2" align="center">${m.name }</td>
-					</tr>
-				</table>
-			</a>
-		</td>
-	<c:if test="${s.index % 4 == 3 }">
-	</tr>
-	</c:if>
-</c:forEach>
-</table>
+	<table align="center">
+		<tr>
+			<td colspan="2" align="center"><a href="${pageContext.request.contextPath}/toCart">查看购物车</a></td>
+		</tr>
+		<tr>
+			<td><img width="120" height="100" alt="暂无图片" src="${m.imgPath }"></td>
+			<td>${m.description }</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">${m.name }</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><a href="${pageContext.request.contextPath}/addToCart/${m.uuid }">加入购物车</a></td>
+		</tr>
+	</table>
 
 </body>
 </html>
