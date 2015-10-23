@@ -66,6 +66,7 @@ DROP TABLE IF EXISTS `tb1_order`;
 
 CREATE TABLE `tb1_order` (
   `uuid` int(11) NOT NULL AUTO_INCREMENT,
+  `customerUuid` int(11) DEFAULT NULL,
   `orderTime` varchar(100) DEFAULT NULL,
   `totalMoney` float DEFAULT NULL,
   `saveMoney` float DEFAULT NULL,
