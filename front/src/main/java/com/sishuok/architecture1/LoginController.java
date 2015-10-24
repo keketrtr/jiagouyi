@@ -19,7 +19,7 @@ public class LoginController {
 	@Resource
 	private ICustomerService customerService;
 	
-	@RequestMapping(value="/", method=RequestMethod.GET)
+	@RequestMapping(value="/toLogin", method=RequestMethod.GET)
 	public String toLogin(){
 		return "login";
 	}

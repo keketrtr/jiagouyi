@@ -9,22 +9,31 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/application.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+</script>
 </head>
 <body>
 
-	<table align="center">
+	<table width="70%" align="center" border="1">
 		<tr>
-			<td colspan="2" align="center"><a href="${pageContext.request.contextPath}/toCart">查看购物车</a></td>
+			<th>客户编号</th>
+			<th>商品编号</th>
+			<th>购买数量</th>
 		</tr>
+		<c:forEach items="${page.result}" var="m">
+			<tr>
+				<td>${m.customerUuid }</td>
+				<td>${m.goodUuid }</td>
+				<td>${m.buyNum }</td>
+			</tr>
+		</c:forEach>
 		<tr>
-			<td><img width="120" height="100" alt="暂无图片" src="${pageContext.request.contextPath}/${m.imgPath }"></td>
-			<td>${m.description }</td>
-		</tr>
-		<tr>
-			<td colspan="2" align="center">${m.name }</td>
-		</tr>
-		<tr>
-			<td colspan="2" align="center"><a href="${pageContext.request.contextPath}/addToCart/${m.uuid }">加入购物车</a></td>
+			<td colspan="3">
+				<a id="btn_order" href="${pageContext.request.contextPath}/order">提交订单</a>
+			</td>
 		</tr>
 	</table>
 
