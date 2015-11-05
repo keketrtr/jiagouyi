@@ -1,9 +1,10 @@
-package com.sishuok.memcached;
+package com.sishuok.architecture1.goodsmgr.client;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.danga.MemCached.MemCachedClient;
+import com.sishuok.memcached.MemcachedUtil;
 
 public class ClientTest {
 	public static void main(String[] args) {

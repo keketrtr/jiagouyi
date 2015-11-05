@@ -2,7 +2,11 @@ package com.sishuok.memcached;
 
 import com.danga.MemCached.MemCachedClient;
 import com.danga.MemCached.SockIOPool;
-
+/**
+ * 不集成spring，单独使用memcache的时候可以用该工具类
+ * @author sunniwell
+ *
+ */
 public class MemcachedUtil {
 	private static MemCachedClient memCachedClient = new MemCachedClient();
 
@@ -11,7 +15,7 @@ public class MemcachedUtil {
 
 	static {
 		//服务器列表及其权重
-		String[] servers = { "172.16.15.111:2222" };
+		String[] servers = { "127.0.0.1:11211" };
 		Integer[] weights = {1};
 		
 		SockIOPool pool = SockIOPool.getInstance();

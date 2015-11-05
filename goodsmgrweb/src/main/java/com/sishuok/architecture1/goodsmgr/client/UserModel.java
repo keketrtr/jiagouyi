@@ -1,4 +1,4 @@
-package com.sishuok.memcached;
+package com.sishuok.architecture1.goodsmgr.client;
 
 import java.io.Serializable;
 

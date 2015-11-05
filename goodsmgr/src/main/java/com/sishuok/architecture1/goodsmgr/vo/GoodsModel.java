@@ -31,4 +31,9 @@ public class GoodsModel extends BaseModel<GoodsModel> {
 		this.description = description;
 	}
 
+	@Override
+	public String toString() {
+		return "GoodsModel [name=" + name + ", getUuid()=" + getUuid() + "]";
+	}
+
 }
