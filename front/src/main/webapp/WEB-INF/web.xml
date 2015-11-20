@@ -16,6 +16,11 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	
+	<listener>
+		<display-name>QueueReceiver</display-name>
+		<listener-class>com.sishuok.architecture1.ordermgr.queue.QueueReceiver</listener-class>
+	</listener>
+	
 	<filter>
 		<description>字符编码</description>
 		<filter-name>CharacterEncodingFilter</filter-name>
