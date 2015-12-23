@@ -33,6 +33,11 @@
 	  <version>2.6.6</version>
 	</dependency>
 	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>2.6</version>
+	</dependency>
+	<dependency>
 		<groupId>commons-pool</groupId>
 		<artifactId>commons-pool</artifactId>
 		<version>1.6</version>
@@ -201,6 +206,22 @@
 	  <artifactId>activemq-pool</artifactId>
 	  <version>5.12.1</version>
 	</dependency>
+	
+	<dependency>
+    	<groupId>org.springframework.data</groupId>
+    	<artifactId>spring-data-commons</artifactId>
+    	<version>1.5.1.RELEASE</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework.data</groupId>
+    	<artifactId>spring-data-mongodb</artifactId>
+    	<version>1.4.2.RELEASE</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.mongodb</groupId>
+    	<artifactId>mongo-java-driver</artifactId>
+    	<version>2.12.1</version>
+    </dependency>
 	
     <dependency>
       <groupId>junit</groupId>
