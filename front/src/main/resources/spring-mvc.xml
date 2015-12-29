@@ -29,4 +29,16 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/toLogin" />
+		<property name="unauthorizedUrl" value="/unauthorized.jsp" />
+		<property name="filterChainDefinitions">
+			<value>
+				/jcaptcha* = anon
+				/logout = anon
+			</value>
+		</property>
+	</bean>
+	
 </beans>

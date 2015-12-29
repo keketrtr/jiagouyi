@@ -2,6 +2,9 @@ package com.sishuok.architecture1;
 
 import javax.annotation.Resource;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.sishuok.architecture1.cartmgr.service.ICartService;
 import com.sishuok.architecture1.cartmgr.vo.CartModel;
 import com.sishuok.architecture1.cartmgr.vo.CartQueryModel;
+import com.sishuok.architecture1.customermgr.vo.CustomerModel;
 import com.sishuok.architecture1.goodsmgr.service.IGoodsService;
 import com.sishuok.architecture1.goodsmgr.vo.GoodsModel;
 import com.sishuok.architecture1.goodsmgr.vo.GoodsQueryModel;
@@ -33,9 +37,16 @@ public class IndexController {
 	private IOrderDetailService orderDetailService;
 	@Resource
 	private IStoreService storeService;
+	@Resource
+	private SecurityManager securityManager;
 	
 	@RequestMapping(value="/toIndex", method=RequestMethod.GET)
 	public String toIndex(Model model){
+		SecurityUtils.setSecurityManager(securityManager);
+		Subject currentUser = SecurityUtils.getSubject();
+		CustomerModel customerModel = (CustomerModel) currentUser.getSession().getAttribute("Login_Customer");
+		System.out.println("now customerModel==="+customerModel);
+		
 		GoodsQueryModel qm = new GoodsQueryModel();
 		qm.getPage().setNumPerPage(100);
 		Page<GoodsModel> page = goodsService.getByConditionPage(qm);
