@@ -13,7 +13,7 @@ import com.sishuok.interactive.InteractiveBaseController;
 
 @Controller
 @RequestMapping(value="/goodsFI")
-public class GoodsInteractiveController extends InteractiveBaseController {
+public class GoodsForInteractiveController extends InteractiveBaseController {
 	@Resource
 	private GoodsService goodsService;
 	@Override

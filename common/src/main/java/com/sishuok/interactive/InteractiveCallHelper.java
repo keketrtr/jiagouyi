@@ -28,9 +28,17 @@ public class InteractiveCallHelper {
 		//1：根据moduleId去获取到该模块部署的信息
 		//这里没有模块管理，所以只是简单地做个测试数据
 		ModuleModel mm = new ModuleModel();
-		mm.setDeployIP("localhost");
-		mm.setDeployPort("9080");
-		mm.setInteractiveUrl("/goods/goodsFI/call");
+//		mm.setDeployIP("localhost");
+//		mm.setDeployPort("9080");
+//		mm.setInteractiveUrl("/goods/goodsFI/call");
+		
+		mm.setDeployIP(mapParams.get("ip").toString());
+		mm.setDeployPort(mapParams.get("port").toString());
+		mm.setInteractiveUrl(mapParams.get("url").toString());
+		
+		mapParams.remove("ip");
+		mapParams.remove("port");
+		mapParams.remove("url");
 		//2：准备要传递的数据，吧Map转换成为Json
 		String paramStr = JSON.toJSONString(mapParams);
 		paramStr = paramStr.replace("#", "*");

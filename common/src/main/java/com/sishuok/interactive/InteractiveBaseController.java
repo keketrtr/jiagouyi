@@ -20,6 +20,7 @@ public abstract class InteractiveBaseController {
 			jsonParam = jsonParam.replace("*", "#");
 		}
 		InteractiveModel im = InteractiveUtil.paramJson2Model(jsonParam);
+		System.out.println("=================================");
 		//去做真正的业务
 		Object ret = doCall(im.getOpeType(), im.getMap());
 		return ret;
