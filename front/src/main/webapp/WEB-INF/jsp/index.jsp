@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -11,7 +12,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/application.js"></script>
 </head>
 <body>
-
+time==<%=new Date().getTime()%>
 <table width="70%" align="center">
 	<tr>
 		<td colspan="4" align="center"><a href="${pageContext.request.contextPath}/toCart">查看购物车</a></td>
